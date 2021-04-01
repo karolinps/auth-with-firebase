@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import AuthContext from "../context/authContext";
+import { withRouter } from "react-router-dom";
 
 function Dashboard() {
   const { currentUser } = useContext(AuthContext);
@@ -7,10 +8,10 @@ function Dashboard() {
   const [avatar, setAvatar] = useState(null);
 
   useEffect(() => {
-    currentUser ? setName(currentUser.displayName) : setName("");
-    currentUser ? setAvatar(currentUser.photoURL) : setAvatar("");
-  }, []);
-
+    currentUser ? setName(currentUser.displayName) : setName(null);
+    currentUser ? setAvatar(currentUser.photoURL) : setAvatar(null);
+  }, [currentUser]);
+  
   return (
     <div
       style={{
@@ -29,4 +30,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);
