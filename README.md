@@ -1,2 +1,4 @@
 # auth-with-firebase
-Autenticación con firebase, por correo - contraseña, por facebook y github
+Reactjs - autenticación con firebase, por correo - contraseña, por facebook y github
+
+Cambiar credenciales de config en firebase.js
