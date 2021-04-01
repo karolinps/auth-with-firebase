@@ -1,19 +1,32 @@
 import React, { useContext, useEffect, useState } from "react";
 import AuthContext from "../context/authContext";
-import { withRouter } from "react-router-dom";
 
 function Dashboard() {
-  const { user } = useContext(AuthContext);
-  const [name, setName] = useState();
+  const { currentUser } = useContext(AuthContext);
+  const [name, setName] = useState(null);
+  const [avatar, setAvatar] = useState(null);
 
   useEffect(() => {
-    user ? setName(user.displayName) : setName("");
+    currentUser ? setName(currentUser.displayName) : setName("");
+    currentUser ? setAvatar(currentUser.photoURL) : setAvatar("");
   }, []);
+
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "center",
+      }}
+    >
       <h1>Bienvenido {name}</h1>
-    </>
+      <img
+        src={avatar}
+        alt="avatar"
+        style={{ width: 100, borderRadius: "50%" }}
+      />
+    </div>
   );
 }
 
-export default withRouter(Dashboard);
+export default Dashboard;
