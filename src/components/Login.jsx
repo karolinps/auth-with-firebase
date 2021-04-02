@@ -85,7 +85,7 @@ function Login(props) {
             Google
           </Button>
           <Button
-            style={{ background: "#3b5999", color: "white" }}
+            style={{ background: "#3b5999", color: "white", margin: "0 5px" }}
             onClick={() => loginBySocial(providerFacebook)}
           >
             Facebook

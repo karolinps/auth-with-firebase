@@ -24,7 +24,7 @@ function Dashboard() {
       <img
         src={avatar}
         alt="avatar"
-        style={{ width: 100, borderRadius: "50%" }}
+        style={{ width: 100, borderRadius: "50%", margin:'0 2em' }}
       />
     </div>
   );
