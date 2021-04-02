@@ -53,7 +53,7 @@ function Login(props) {
           rules={[
             {
               required: true,
-              message: "Please input your username!",
+              message: "Por favor ingrese el correo electrónico",
             },
           ]}
         >
@@ -65,7 +65,7 @@ function Login(props) {
           rules={[
             {
               required: true,
-              message: "Please input your password!",
+              message: "Por favor ingrese la contraseña",
             },
           ]}
         >

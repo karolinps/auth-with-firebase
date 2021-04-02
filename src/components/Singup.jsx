@@ -42,7 +42,7 @@ function Singup(props) {
           rules={[
             {
               required: true,
-              message: "Please input your name!",
+              message: "Por favor ingrese su nombre!",
             },
           ]}
         >
@@ -53,7 +53,7 @@ function Singup(props) {
           rules={[
             {
               required: true,
-              message: "Please input your username!",
+              message: "Por favor ingrese su correo electrónico!",
             },
           ]}
         >
@@ -65,7 +65,7 @@ function Singup(props) {
           rules={[
             {
               required: true,
-              message: "Please input your password!",
+              message: "Por favor ingrese su contraseña!",
             },
           ]}
         >
