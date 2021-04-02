@@ -1,11 +1,10 @@
 import { Form, Input, Button, message } from "antd";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import { firebase } from "../firebase";
 
 function Singup(props) {
   const onFinish = async (values) => {
     try {
-      
       await firebase
         .auth()
         .createUserWithEmailAndPassword(values.email, values.password);
@@ -16,7 +15,6 @@ function Singup(props) {
 
       props.history.push("/dashboard");
       message.success("Se ha registrado correctamente");
-
     } catch (error) {
       var errorMessage = error.message;
       message.warning(errorMessage);
@@ -78,7 +76,7 @@ function Singup(props) {
             Registrarse
           </Button>
           <div>
-            <a onClick={() => props.history.push("/login")}>Volver al login</a>
+            <Link to="/login">Volver al login</Link>
           </div>
         </Form.Item>
       </Form>

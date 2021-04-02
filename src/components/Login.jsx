@@ -1,6 +1,6 @@
 import { Form, Input, Button, message } from "antd";
 
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 import {
   firebase,
@@ -76,8 +76,7 @@ function Login(props) {
             Acceder
           </Button>
           <div>
-            ¿No tienes cuenta?{" "}
-            <a onClick={() => props.history.push("/singup")}>registrate</a>
+            ¿No tienes cuenta? <Link to="/singup">Registrate</Link>
           </div>
         </Form.Item>
         <Form.Item>
